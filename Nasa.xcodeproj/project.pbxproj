@@ -18,13 +18,12 @@
 		5F073861291F7D9700AF0886 /* NasaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F073860291F7D9700AF0886 /* NasaUITests.swift */; };
 		5F073863291F7D9700AF0886 /* NasaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F073862291F7D9700AF0886 /* NasaUITestsLaunchTests.swift */; };
 		5F073870291F85EE00AF0886 /* PlanatoryPod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F07386F291F85EE00AF0886 /* PlanatoryPod.swift */; };
-		5F073873291FB7BE00AF0886 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F073872291FB7BE00AF0886 /* ApiManager.swift */; };
-		5F073875291FB85600AF0886 /* Constatnts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F073874291FB85600AF0886 /* Constatnts.swift */; };
-		5F073877291FB9EA00AF0886 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F073876291FB9EA00AF0886 /* NetworkManager.swift */; };
-		5F4E979B291FEC310087B8CF /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4E979A291FEC310087B8CF /* DateExtensions.swift */; };
+		5F1623272921945900F381EC /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1623232921945800F381EC /* ImageCache.swift */; };
+		5F1623282921945900F381EC /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1623242921945800F381EC /* ApiManager.swift */; };
+		5F1623292921945900F381EC /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1623252921945900F381EC /* NetworkManager.swift */; };
+		5F16232A2921945900F381EC /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1623262921945900F381EC /* ImageDownloader.swift */; };
+		5F16232D2921948800F381EC /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F16232C2921948800F381EC /* DateExtensions.swift */; };
 		5F4E979E291FF0C20087B8CF /* PictureOfDayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4E979D291FF0C20087B8CF /* PictureOfDayManager.swift */; };
-		5F4E97A0291FF5940087B8CF /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4E979F291FF5940087B8CF /* ImageDownloader.swift */; };
-		5F4E97A229200EF40087B8CF /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4E97A129200EF40087B8CF /* ImageCache.swift */; };
 		5F6DFBFF29213E1D0013A7DB /* FavouritePodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6DFBFE29213E1D0013A7DB /* FavouritePodCell.swift */; };
 		5FEB194129213AB4001237D4 /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEB193F29213AB4001237D4 /* FavouritesViewController.swift */; };
 		5FEB194229213AB4001237D4 /* FavouritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEB194029213AB4001237D4 /* FavouritesViewModel.swift */; };
@@ -63,13 +62,12 @@
 		5F073860291F7D9700AF0886 /* NasaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaUITests.swift; sourceTree = "<group>"; };
 		5F073862291F7D9700AF0886 /* NasaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5F07386F291F85EE00AF0886 /* PlanatoryPod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanatoryPod.swift; sourceTree = "<group>"; };
-		5F073872291FB7BE00AF0886 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ApiManager.swift; path = nasa/ApiManager.swift; sourceTree = SOURCE_ROOT; };
-		5F073874291FB85600AF0886 /* Constatnts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Constatnts.swift; path = nasa/Constatnts.swift; sourceTree = SOURCE_ROOT; };
-		5F073876291FB9EA00AF0886 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NetworkManager.swift; path = nasa/NetworkManager.swift; sourceTree = SOURCE_ROOT; };
-		5F4E979A291FEC310087B8CF /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DateExtensions.swift; path = nasa/DateExtensions.swift; sourceTree = SOURCE_ROOT; };
+		5F1623232921945800F381EC /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageCache.swift; path = nasa/Network/ImageCache.swift; sourceTree = SOURCE_ROOT; };
+		5F1623242921945800F381EC /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApiManager.swift; path = nasa/Network/ApiManager.swift; sourceTree = SOURCE_ROOT; };
+		5F1623252921945900F381EC /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkManager.swift; path = nasa/Network/NetworkManager.swift; sourceTree = SOURCE_ROOT; };
+		5F1623262921945900F381EC /* ImageDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageDownloader.swift; path = nasa/Network/ImageDownloader.swift; sourceTree = SOURCE_ROOT; };
+		5F16232C2921948800F381EC /* DateExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateExtensions.swift; path = nasa/Common/DateExtensions.swift; sourceTree = SOURCE_ROOT; };
 		5F4E979D291FF0C20087B8CF /* PictureOfDayManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PictureOfDayManager.swift; path = nasa/Landing/ViewModel/PictureOfDayManager.swift; sourceTree = SOURCE_ROOT; };
-		5F4E979F291FF5940087B8CF /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImageDownloader.swift; path = nasa/ImageDownloader.swift; sourceTree = SOURCE_ROOT; };
-		5F4E97A129200EF40087B8CF /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImageCache.swift; path = nasa/ImageCache.swift; sourceTree = SOURCE_ROOT; };
 		5F6DFBFE29213E1D0013A7DB /* FavouritePodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FavouritePodCell.swift; path = nasa/Favourite/FavouritePodCell.swift; sourceTree = SOURCE_ROOT; };
 		5FEB193F29213AB4001237D4 /* FavouritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavouritesViewController.swift; path = nasa/Favourite/FavouritesViewController.swift; sourceTree = SOURCE_ROOT; };
 		5FEB194029213AB4001237D4 /* FavouritesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavouritesViewModel.swift; path = nasa/Favourite/FavouritesViewModel.swift; sourceTree = SOURCE_ROOT; };
@@ -123,21 +121,16 @@
 		5F07383B291F7D9400AF0886 /* Nasa */ = {
 			isa = PBXGroup;
 			children = (
-				5F07383C291F7D9400AF0886 /* AppDelegate.swift */,
-				5F07383E291F7D9400AF0886 /* SceneDelegate.swift */,
+				5F16232E2921949200F381EC /* App Lifecycle */,
 				5F4E979C291FEFD70087B8CF /* Landing */,
 				5FEB193E29213A6E001237D4 /* Favourite */,
+				5F1623222921944700F381EC /* Network */,
+				5F16232B2921947E00F381EC /* Common */,
 				5F073842291F7D9400AF0886 /* Main.storyboard */,
-				5F073848291F7D9600AF0886 /* Assets.xcassets */,
 				5F07384A291F7D9600AF0886 /* LaunchScreen.storyboard */,
+				5F073848291F7D9600AF0886 /* Assets.xcassets */,
 				5F07384D291F7D9600AF0886 /* Info.plist */,
 				5F073845291F7D9400AF0886 /* Nasa.xcdatamodeld */,
-				5F073872291FB7BE00AF0886 /* ApiManager.swift */,
-				5F073874291FB85600AF0886 /* Constatnts.swift */,
-				5F073876291FB9EA00AF0886 /* NetworkManager.swift */,
-				5F4E979A291FEC310087B8CF /* DateExtensions.swift */,
-				5F4E979F291FF5940087B8CF /* ImageDownloader.swift */,
-				5F4E97A129200EF40087B8CF /* ImageCache.swift */,
 			);
 			path = Nasa;
 			sourceTree = "<group>";
@@ -166,6 +159,34 @@
 				5F07386F291F85EE00AF0886 /* PlanatoryPod.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5F1623222921944700F381EC /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				5F1623242921945800F381EC /* ApiManager.swift */,
+				5F1623232921945800F381EC /* ImageCache.swift */,
+				5F1623262921945900F381EC /* ImageDownloader.swift */,
+				5F1623252921945900F381EC /* NetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		5F16232B2921947E00F381EC /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				5F16232C2921948800F381EC /* DateExtensions.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		5F16232E2921949200F381EC /* App Lifecycle */ = {
+			isa = PBXGroup;
+			children = (
+				5F07383C291F7D9400AF0886 /* AppDelegate.swift */,
+				5F07383E291F7D9400AF0886 /* SceneDelegate.swift */,
+			);
+			path = "App Lifecycle";
 			sourceTree = "<group>";
 		};
 		5F4E979C291FEFD70087B8CF /* Landing */ = {
@@ -318,20 +339,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F1623282921945900F381EC /* ApiManager.swift in Sources */,
+				5F1623272921945900F381EC /* ImageCache.swift in Sources */,
 				5F073847291F7D9400AF0886 /* Nasa.xcdatamodeld in Sources */,
-				5F4E979B291FEC310087B8CF /* DateExtensions.swift in Sources */,
 				5F073841291F7D9400AF0886 /* ViewController.swift in Sources */,
 				5FEB194129213AB4001237D4 /* FavouritesViewController.swift in Sources */,
 				5F6DFBFF29213E1D0013A7DB /* FavouritePodCell.swift in Sources */,
 				5F07383D291F7D9400AF0886 /* AppDelegate.swift in Sources */,
 				5F073870291F85EE00AF0886 /* PlanatoryPod.swift in Sources */,
 				5FEB194229213AB4001237D4 /* FavouritesViewModel.swift in Sources */,
-				5F073877291FB9EA00AF0886 /* NetworkManager.swift in Sources */,
-				5F4E97A229200EF40087B8CF /* ImageCache.swift in Sources */,
-				5F4E97A0291FF5940087B8CF /* ImageDownloader.swift in Sources */,
-				5F073873291FB7BE00AF0886 /* ApiManager.swift in Sources */,
+				5F1623292921945900F381EC /* NetworkManager.swift in Sources */,
+				5F16232D2921948800F381EC /* DateExtensions.swift in Sources */,
 				5F4E979E291FF0C20087B8CF /* PictureOfDayManager.swift in Sources */,
-				5F073875291FB85600AF0886 /* Constatnts.swift in Sources */,
+				5F16232A2921945900F381EC /* ImageDownloader.swift in Sources */,
 				5F07383F291F7D9400AF0886 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
