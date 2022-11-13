@@ -23,7 +23,7 @@
 		5F1623292921945900F381EC /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1623252921945900F381EC /* NetworkManager.swift */; };
 		5F16232A2921945900F381EC /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1623262921945900F381EC /* ImageDownloader.swift */; };
 		5F16232D2921948800F381EC /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F16232C2921948800F381EC /* DateExtensions.swift */; };
-		5F4E979E291FF0C20087B8CF /* PictureOfDayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4E979D291FF0C20087B8CF /* PictureOfDayManager.swift */; };
+		5F4E979E291FF0C20087B8CF /* PictureOfDayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4E979D291FF0C20087B8CF /* PictureOfDayViewModel.swift */; };
 		5F6DFBFF29213E1D0013A7DB /* FavouritePodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6DFBFE29213E1D0013A7DB /* FavouritePodCell.swift */; };
 		5FEB194129213AB4001237D4 /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEB193F29213AB4001237D4 /* FavouritesViewController.swift */; };
 		5FEB194229213AB4001237D4 /* FavouritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEB194029213AB4001237D4 /* FavouritesViewModel.swift */; };
@@ -67,7 +67,7 @@
 		5F1623252921945900F381EC /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkManager.swift; path = nasa/Network/NetworkManager.swift; sourceTree = SOURCE_ROOT; };
 		5F1623262921945900F381EC /* ImageDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageDownloader.swift; path = nasa/Network/ImageDownloader.swift; sourceTree = SOURCE_ROOT; };
 		5F16232C2921948800F381EC /* DateExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateExtensions.swift; path = nasa/Common/DateExtensions.swift; sourceTree = SOURCE_ROOT; };
-		5F4E979D291FF0C20087B8CF /* PictureOfDayManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PictureOfDayManager.swift; path = nasa/Landing/ViewModel/PictureOfDayManager.swift; sourceTree = SOURCE_ROOT; };
+		5F4E979D291FF0C20087B8CF /* PictureOfDayViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PictureOfDayViewModel.swift; path = nasa/Landing/ViewModel/PictureOfDayViewModel.swift; sourceTree = SOURCE_ROOT; };
 		5F6DFBFE29213E1D0013A7DB /* FavouritePodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FavouritePodCell.swift; path = nasa/Favourite/FavouritePodCell.swift; sourceTree = SOURCE_ROOT; };
 		5FEB193F29213AB4001237D4 /* FavouritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavouritesViewController.swift; path = nasa/Favourite/FavouritesViewController.swift; sourceTree = SOURCE_ROOT; };
 		5FEB194029213AB4001237D4 /* FavouritesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavouritesViewModel.swift; path = nasa/Favourite/FavouritesViewModel.swift; sourceTree = SOURCE_ROOT; };
@@ -155,7 +155,7 @@
 		5F073871291F871E00AF0886 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				5F4E979D291FF0C20087B8CF /* PictureOfDayManager.swift */,
+				5F4E979D291FF0C20087B8CF /* PictureOfDayViewModel.swift */,
 				5F07386F291F85EE00AF0886 /* PlanatoryPod.swift */,
 			);
 			path = ViewModel;
@@ -350,7 +350,7 @@
 				5FEB194229213AB4001237D4 /* FavouritesViewModel.swift in Sources */,
 				5F1623292921945900F381EC /* NetworkManager.swift in Sources */,
 				5F16232D2921948800F381EC /* DateExtensions.swift in Sources */,
-				5F4E979E291FF0C20087B8CF /* PictureOfDayManager.swift in Sources */,
+				5F4E979E291FF0C20087B8CF /* PictureOfDayViewModel.swift in Sources */,
 				5F16232A2921945900F381EC /* ImageDownloader.swift in Sources */,
 				5F07383F291F7D9400AF0886 /* SceneDelegate.swift in Sources */,
 			);

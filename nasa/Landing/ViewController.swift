@@ -7,7 +7,6 @@
 
 import UIKit
 import Foundation
-import AVFoundation
 import WebKit
 import CoreGraphics
 
@@ -21,7 +20,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var dateTextField: UITextField!
     lazy var webView = WKWebView()
     let datePicker = UIDatePicker()
-    var viewModel = PlanatoryPodManager()
+    var viewModel = PlanatoryPodViewModel()
     var selectedDate = Date()
     
     override func viewDidLoad() {

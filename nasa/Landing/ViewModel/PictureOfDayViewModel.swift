@@ -15,7 +15,7 @@ protocol PlanatoryPodManagable {
     var plantoryPod: PlanatoryPod {get set}
 }
 
-class PlanatoryPodManager: PlanatoryPodManagable {
+class PlanatoryPodViewModel: PlanatoryPodManagable {
     
     var plantoryPod = PlanatoryPod()
     
