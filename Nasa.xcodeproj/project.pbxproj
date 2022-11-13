@@ -126,6 +126,7 @@
 				5F07383C291F7D9400AF0886 /* AppDelegate.swift */,
 				5F07383E291F7D9400AF0886 /* SceneDelegate.swift */,
 				5F4E979C291FEFD70087B8CF /* Landing */,
+				5FEB193E29213A6E001237D4 /* Favourite */,
 				5F073842291F7D9400AF0886 /* Main.storyboard */,
 				5F073848291F7D9600AF0886 /* Assets.xcassets */,
 				5F07384A291F7D9600AF0886 /* LaunchScreen.storyboard */,
@@ -137,7 +138,6 @@
 				5F4E979A291FEC310087B8CF /* DateExtensions.swift */,
 				5F4E979F291FF5940087B8CF /* ImageDownloader.swift */,
 				5F4E97A129200EF40087B8CF /* ImageCache.swift */,
-				5FEB193E29213A6E001237D4 /* Favourite */,
 			);
 			path = Nasa;
 			sourceTree = "<group>";
