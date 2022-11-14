@@ -34,7 +34,7 @@ final class ImageCache {
             loadingResponses[url] = [completion]
         }
         // if not, download image from url
-        URLSession.shared.dataTask(with: url as URL, completionHandler: { (data, response, error) in
+        FileDownloader.urlSession().dataTask(with: url as URL, completionHandler: { (data, response, error) in
             if error != nil {
                 print(error!)
                 return

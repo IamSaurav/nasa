@@ -10,19 +10,18 @@ import UIKit
 
 class FavouritesViewController: UIViewController {
     
-    var viewModel = FavouritesViewModel()
+    var viewModel: FavouritePodManagable!
     @IBOutlet weak var collectionView: UICollectionView!
     var showFavouritePod: ((PlanatoryPod)->Void)?
+    
+    
     override func viewDidLoad() {
         viewModel.getAstronomyPods { pods in
             self.collectionView.reloadData()
         } failed: { message in
             
         }
-
     }
-    
-    
     
     
 }

@@ -11,6 +11,7 @@ import CoreData
 
 protocol PlanatoryPodManagable {
     func getPictureOfDay(date: String, successful: @escaping ((PlanatoryPod)->Void), failed: @escaping ((String)->Void))
+    @discardableResult
     func updatePod(pod: PlanatoryPod) -> Bool
     func retrievePod(date: String) -> PlanatoryPod?
     var plantoryPod: PlanatoryPod {get set}

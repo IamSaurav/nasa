@@ -18,26 +18,38 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var favouriteButton: UIButton!
     @IBOutlet weak var dateTextField: UITextField!
+    
+    var spinner = UIActivityIndicatorView(style: .whiteLarge)
+
     lazy var webView = WKWebView()
     let datePicker = UIDatePicker()
-    var viewModel = PlanatoryPodViewModel()
+    var viewModel: PlanatoryPodManagable?
     var selectedDate = Date()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupDataModel()
+        setupViewModel()
         setupUI()
     }
     
     func setupUI() {
+        // To select pickture of the day for a Date
+        setupDatePicker()
+        // To show loading indocator while downloading image
+        setupActivityIndicator()
+        // Show/Hide controls based on tap on image view
+        addTapGestureRecognizer()
+    }
+    
+    func setupDatePicker() {
         dateTextField.text = selectedDate.toString()
         datePicker.datePickerMode = .date
         datePicker.preferredDatePickerStyle = .wheels
         let toolbar = UIToolbar();
         toolbar.sizeToFit()
-        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(self.donedatePicker))
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(self.onDoneButtonTap))
         let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(self.cancelDatePicker))
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(self.onCancelButtonTap))
         toolbar.setItems([doneButton,spaceButton,cancelButton], animated: false)
         dateTextField.inputAccessoryView = toolbar
         dateTextField.inputView = datePicker
@@ -53,7 +65,17 @@ class ViewController: UIViewController, UITextFieldDelegate {
         iconContainerView.addSubview(iconView)
         dateTextField.leftView = iconContainerView
         dateTextField.leftViewMode = .always
-        
+    }
+    
+    func setupActivityIndicator() {
+        spinner.translatesAutoresizingMaskIntoConstraints = false
+        spinner.startAnimating()
+        view.addSubview(spinner)
+        spinner.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        spinner.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+    }
+    
+    func addTapGestureRecognizer() {
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 10) {
             self.toggleControls(fadeOut: true)
         }
@@ -65,14 +87,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
         false
     }
     
-    @objc func donedatePicker() {
+    @objc func onDoneButtonTap() {
         selectedDate = datePicker.date
         dateTextField.text = selectedDate.toString()
         self.view.endEditing(true)
-        setupDataModel()
+        setupViewModel()
     }
     
-    @objc func cancelDatePicker() {
+    @objc func onCancelButtonTap() {
         self.view.endEditing(true)
     }
     
@@ -81,31 +103,36 @@ class ViewController: UIViewController, UITextFieldDelegate {
         toggleControls(fadeOut: !self.favouriteButton.isHidden)
     }
     
-    func setupDataModel() {
-        viewModel.getPictureOfDay(date: selectedDate.toString(), successful: { _ in
+    func setupViewModel() {
+        viewModel = PlanatoryPodViewModel()
+        spinner.startAnimating()
+        viewModel?.getPictureOfDay(date: selectedDate.toString(), successful: { _ in
             self.populateData()
         }, failed: { errorMessage in
+            self.spinner.stopAnimating()
             self.alert(message: errorMessage)
         })
     }
     
     func populateData() {
-        self.titleLabel.text = viewModel.plantoryPod.title
-        self.explanationLabel.text = viewModel.plantoryPod.explanation
+        self.titleLabel.text = viewModel?.plantoryPod.title
+        self.explanationLabel.text = viewModel?.plantoryPod.explanation
         self.updateFavouriteButtonState()
-        if viewModel.plantoryPod.media_type == "video" {
-            guard let urlString = viewModel.plantoryPod.url, let url = URL.init(string: urlString) else {return}
+        if viewModel?.plantoryPod.media_type == "video" {
+            guard let urlString = viewModel?.plantoryPod.url, let url = URL.init(string: urlString) else {return}
             webView.frame = CGRect.init(x: 0, y: 120, width: view.bounds.width, height: view.bounds.height/2)
             view.addSubview(webView)
             imageView.isHidden = true
             webView.isHidden = false
             webView.load(URLRequest.init(url: url, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 20))
+            self.spinner.stopAnimating()
         }else {
             webView.isHidden = true
             imageView.isHidden = false
-            guard let urlString = viewModel.plantoryPod.url, let url = NSURL(string: urlString) else { return }
+            guard let urlString = viewModel?.plantoryPod.url, let url = NSURL(string: urlString) else { return }
             ImageCache.shared.load(url: url) { url, image in
                 self.imageView.image = image
+                self.spinner.stopAnimating()
             }
         }
     }
@@ -127,20 +154,23 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func onFavouriteButtonTap(_ sender: UIButton) {
-        let isFavourite = viewModel.plantoryPod.isFavourite == true
-        viewModel.plantoryPod.isFavourite = !isFavourite
+        let isFavourite = viewModel?.plantoryPod.isFavourite == true
+        viewModel?.plantoryPod.isFavourite = !isFavourite
         updateFavouriteButtonState()
-        viewModel.updatePod(pod: viewModel.plantoryPod)
+        if let pod = viewModel?.plantoryPod {
+            viewModel?.updatePod(pod: pod)
+        }
     }
     
     func updateFavouriteButtonState() {
-        let image = viewModel.plantoryPod.isFavourite == true ? "heart.fill" : "heart"
+        let image = viewModel?.plantoryPod.isFavourite == true ? "heart.fill" : "heart"
         favouriteButton.setImage(UIImage.init(systemName: image), for: .normal)
     }
     
     @IBAction func onFavouriteListButtonTap() {
         let storyboard = UIStoryboard.init(name: "Main", bundle: .main)
         let favViewController = storyboard.instantiateViewController(withIdentifier: "FavouritesViewController") as! FavouritesViewController
+        favViewController.viewModel = FavouritesViewModel()
         let navController = UINavigationController()
         navController.setViewControllers([favViewController], animated: true)
         navController.modalPresentationStyle = .formSheet
@@ -148,7 +178,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         favViewController.showFavouritePod = { pod in
             self.toggleControls(fadeOut: false)
             self.selectedDate = self.toDate(date: pod.date)
-            self.viewModel.plantoryPod = pod
+            self.viewModel?.plantoryPod = pod
             self.populateData()
         }
     }

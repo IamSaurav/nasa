@@ -28,11 +28,11 @@
 		5F4BA3EC2922625E00BC1DB8 /* FavouritesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4BA3EB2922625E00BC1DB8 /* FavouritesViewModelTests.swift */; };
 		5F4BA3EE292262A900BC1DB8 /* MockFavouritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4BA3ED292262A900BC1DB8 /* MockFavouritesViewModel.swift */; };
 		5F4BA3F22922630000BC1DB8 /* MockPictureOfDayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4BA3F12922630000BC1DB8 /* MockPictureOfDayViewModel.swift */; };
+		5F4BA3FA29226ED200BC1DB8 /* FavouritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4BA3F929226ED200BC1DB8 /* FavouritesViewModel.swift */; };
+		5F4BA3FD29226EDF00BC1DB8 /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4BA3FB29226EDF00BC1DB8 /* FavouritesViewController.swift */; };
+		5F4BA3FE29226EDF00BC1DB8 /* FavouritePodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4BA3FC29226EDF00BC1DB8 /* FavouritePodCell.swift */; };
 		5F4E979E291FF0C20087B8CF /* PictureOfDayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4E979D291FF0C20087B8CF /* PictureOfDayViewModel.swift */; };
-		5F6DFBFF29213E1D0013A7DB /* FavouritePodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6DFBFE29213E1D0013A7DB /* FavouritePodCell.swift */; };
 		5FDE775C2921F87F00E552A3 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDE775B2921F87F00E552A3 /* DatabaseManager.swift */; };
-		5FEB194129213AB4001237D4 /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEB193F29213AB4001237D4 /* FavouritesViewController.swift */; };
-		5FEB194229213AB4001237D4 /* FavouritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEB194029213AB4001237D4 /* FavouritesViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,11 +78,11 @@
 		5F4BA3EB2922625E00BC1DB8 /* FavouritesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewModelTests.swift; sourceTree = "<group>"; };
 		5F4BA3ED292262A900BC1DB8 /* MockFavouritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFavouritesViewModel.swift; sourceTree = "<group>"; };
 		5F4BA3F12922630000BC1DB8 /* MockPictureOfDayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPictureOfDayViewModel.swift; sourceTree = "<group>"; };
+		5F4BA3F929226ED200BC1DB8 /* FavouritesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavouritesViewModel.swift; path = nasa/Favourite/ViewModel/FavouritesViewModel.swift; sourceTree = SOURCE_ROOT; };
+		5F4BA3FB29226EDF00BC1DB8 /* FavouritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavouritesViewController.swift; path = nasa/Favourite/View/FavouritesViewController.swift; sourceTree = SOURCE_ROOT; };
+		5F4BA3FC29226EDF00BC1DB8 /* FavouritePodCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavouritePodCell.swift; path = nasa/Favourite/View/FavouritePodCell.swift; sourceTree = SOURCE_ROOT; };
 		5F4E979D291FF0C20087B8CF /* PictureOfDayViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PictureOfDayViewModel.swift; path = nasa/Landing/ViewModel/PictureOfDayViewModel.swift; sourceTree = SOURCE_ROOT; };
-		5F6DFBFE29213E1D0013A7DB /* FavouritePodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FavouritePodCell.swift; path = nasa/Favourite/FavouritePodCell.swift; sourceTree = SOURCE_ROOT; };
 		5FDE775B2921F87F00E552A3 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DatabaseManager.swift; path = Nasa/DatabaseManager.swift; sourceTree = SOURCE_ROOT; };
-		5FEB193F29213AB4001237D4 /* FavouritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavouritesViewController.swift; path = Nasa/Favourite/FavouritesViewController.swift; sourceTree = SOURCE_ROOT; };
-		5FEB194029213AB4001237D4 /* FavouritesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavouritesViewModel.swift; path = nasa/Favourite/FavouritesViewModel.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,7 +172,6 @@
 			isa = PBXGroup;
 			children = (
 				5F4E979D291FF0C20087B8CF /* PictureOfDayViewModel.swift */,
-				5F07386F291F85EE00AF0886 /* PlanatoryPod.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -209,16 +208,57 @@
 			isa = PBXGroup;
 			children = (
 				5FDE775B2921F87F00E552A3 /* DatabaseManager.swift */,
+			);
+			name = Database;
+			sourceTree = "<group>";
+		};
+		5F4BA3F429226E7600BC1DB8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5F07386F291F85EE00AF0886 /* PlanatoryPod.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5F4BA3F529226E8300BC1DB8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5F073840291F7D9400AF0886 /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5F4BA3F629226E8F00BC1DB8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5F4BA3FC29226EDF00BC1DB8 /* FavouritePodCell.swift */,
+				5F4BA3FB29226EDF00BC1DB8 /* FavouritesViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5F4BA3F729226E9400BC1DB8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5F4BA3F929226ED200BC1DB8 /* FavouritesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5F4BA3F829226E9900BC1DB8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
 				5F4BA3E52922465200BC1DB8 /* Favourites+CoreDataClass.swift */,
 				5F4BA3E62922465200BC1DB8 /* Favourites+CoreDataProperties.swift */,
 			);
-			name = Database;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		5F4E979C291FEFD70087B8CF /* Landing */ = {
 			isa = PBXGroup;
 			children = (
-				5F073840291F7D9400AF0886 /* ViewController.swift */,
+				5F4BA3F429226E7600BC1DB8 /* Model */,
+				5F4BA3F529226E8300BC1DB8 /* View */,
 				5F073871291F871E00AF0886 /* ViewModel */,
 			);
 			path = Landing;
@@ -227,9 +267,9 @@
 		5FEB193E29213A6E001237D4 /* Favourite */ = {
 			isa = PBXGroup;
 			children = (
-				5FEB193F29213AB4001237D4 /* FavouritesViewController.swift */,
-				5FEB194029213AB4001237D4 /* FavouritesViewModel.swift */,
-				5F6DFBFE29213E1D0013A7DB /* FavouritePodCell.swift */,
+				5F4BA3F629226E8F00BC1DB8 /* View */,
+				5F4BA3F729226E9400BC1DB8 /* ViewModel */,
+				5F4BA3F829226E9900BC1DB8 /* Model */,
 			);
 			path = Favourite;
 			sourceTree = "<group>";
@@ -367,15 +407,15 @@
 			files = (
 				5F1623282921945900F381EC /* ApiManager.swift in Sources */,
 				5F1623272921945900F381EC /* ImageCache.swift in Sources */,
+				5F4BA3FA29226ED200BC1DB8 /* FavouritesViewModel.swift in Sources */,
 				5FDE775C2921F87F00E552A3 /* DatabaseManager.swift in Sources */,
 				5F073847291F7D9400AF0886 /* Nasa.xcdatamodeld in Sources */,
+				5F4BA3FD29226EDF00BC1DB8 /* FavouritesViewController.swift in Sources */,
 				5F073841291F7D9400AF0886 /* ViewController.swift in Sources */,
 				5F4BA3E72922465200BC1DB8 /* Favourites+CoreDataClass.swift in Sources */,
-				5FEB194129213AB4001237D4 /* FavouritesViewController.swift in Sources */,
-				5F6DFBFF29213E1D0013A7DB /* FavouritePodCell.swift in Sources */,
+				5F4BA3FE29226EDF00BC1DB8 /* FavouritePodCell.swift in Sources */,
 				5F07383D291F7D9400AF0886 /* AppDelegate.swift in Sources */,
 				5F073870291F85EE00AF0886 /* PlanatoryPod.swift in Sources */,
-				5FEB194229213AB4001237D4 /* FavouritesViewModel.swift in Sources */,
 				5F1623292921945900F381EC /* NetworkManager.swift in Sources */,
 				5F4BA3E82922465200BC1DB8 /* Favourites+CoreDataProperties.swift in Sources */,
 				5F16232D2921948800F381EC /* DateExtensions.swift in Sources */,

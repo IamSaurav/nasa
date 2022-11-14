@@ -18,7 +18,7 @@ class FavouritesViewModel: FavouritePodManagable {
     var astronomyPods = [Favourites]()
     
     func getAstronomyPods(successful: @escaping (([Favourites])->Void), failed: @escaping ((String)->Void)) {
-        var databaseManager = DatabaseManager()
+        let databaseManager = DatabaseManager()
         if let pods = databaseManager.fetchPlanatoryPods() {
             astronomyPods = pods
             successful(pods)
