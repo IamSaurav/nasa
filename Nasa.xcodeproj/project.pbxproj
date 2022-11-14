@@ -14,7 +14,6 @@
 		5F073847291F7D9400AF0886 /* Nasa.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5F073845291F7D9400AF0886 /* Nasa.xcdatamodeld */; };
 		5F073849291F7D9600AF0886 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F073848291F7D9600AF0886 /* Assets.xcassets */; };
 		5F07384C291F7D9600AF0886 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F07384A291F7D9600AF0886 /* LaunchScreen.storyboard */; };
-		5F073857291F7D9700AF0886 /* NasaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F073856291F7D9700AF0886 /* NasaTests.swift */; };
 		5F073861291F7D9700AF0886 /* NasaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F073860291F7D9700AF0886 /* NasaUITests.swift */; };
 		5F073863291F7D9700AF0886 /* NasaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F073862291F7D9700AF0886 /* NasaUITestsLaunchTests.swift */; };
 		5F073870291F85EE00AF0886 /* PlanatoryPod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F07386F291F85EE00AF0886 /* PlanatoryPod.swift */; };
@@ -25,6 +24,10 @@
 		5F16232D2921948800F381EC /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F16232C2921948800F381EC /* DateExtensions.swift */; };
 		5F4BA3E72922465200BC1DB8 /* Favourites+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4BA3E52922465200BC1DB8 /* Favourites+CoreDataClass.swift */; };
 		5F4BA3E82922465200BC1DB8 /* Favourites+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4BA3E62922465200BC1DB8 /* Favourites+CoreDataProperties.swift */; };
+		5F4BA3EA2922624F00BC1DB8 /* PictureOfDayViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4BA3E92922624F00BC1DB8 /* PictureOfDayViewModelTests.swift */; };
+		5F4BA3EC2922625E00BC1DB8 /* FavouritesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4BA3EB2922625E00BC1DB8 /* FavouritesViewModelTests.swift */; };
+		5F4BA3EE292262A900BC1DB8 /* MockFavouritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4BA3ED292262A900BC1DB8 /* MockFavouritesViewModel.swift */; };
+		5F4BA3F22922630000BC1DB8 /* MockPictureOfDayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4BA3F12922630000BC1DB8 /* MockPictureOfDayViewModel.swift */; };
 		5F4E979E291FF0C20087B8CF /* PictureOfDayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4E979D291FF0C20087B8CF /* PictureOfDayViewModel.swift */; };
 		5F6DFBFF29213E1D0013A7DB /* FavouritePodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6DFBFE29213E1D0013A7DB /* FavouritePodCell.swift */; };
 		5FDE775C2921F87F00E552A3 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDE775B2921F87F00E552A3 /* DatabaseManager.swift */; };
@@ -60,7 +63,6 @@
 		5F07384B291F7D9600AF0886 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5F07384D291F7D9600AF0886 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5F073852291F7D9700AF0886 /* NasaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NasaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5F073856291F7D9700AF0886 /* NasaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaTests.swift; sourceTree = "<group>"; };
 		5F07385C291F7D9700AF0886 /* NasaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NasaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F073860291F7D9700AF0886 /* NasaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaUITests.swift; sourceTree = "<group>"; };
 		5F073862291F7D9700AF0886 /* NasaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -72,10 +74,14 @@
 		5F16232C2921948800F381EC /* DateExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateExtensions.swift; path = nasa/Common/DateExtensions.swift; sourceTree = SOURCE_ROOT; };
 		5F4BA3E52922465200BC1DB8 /* Favourites+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Favourites+CoreDataClass.swift"; sourceTree = "<group>"; };
 		5F4BA3E62922465200BC1DB8 /* Favourites+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Favourites+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		5F4BA3E92922624F00BC1DB8 /* PictureOfDayViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureOfDayViewModelTests.swift; sourceTree = "<group>"; };
+		5F4BA3EB2922625E00BC1DB8 /* FavouritesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewModelTests.swift; sourceTree = "<group>"; };
+		5F4BA3ED292262A900BC1DB8 /* MockFavouritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFavouritesViewModel.swift; sourceTree = "<group>"; };
+		5F4BA3F12922630000BC1DB8 /* MockPictureOfDayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPictureOfDayViewModel.swift; sourceTree = "<group>"; };
 		5F4E979D291FF0C20087B8CF /* PictureOfDayViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PictureOfDayViewModel.swift; path = nasa/Landing/ViewModel/PictureOfDayViewModel.swift; sourceTree = SOURCE_ROOT; };
 		5F6DFBFE29213E1D0013A7DB /* FavouritePodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FavouritePodCell.swift; path = nasa/Favourite/FavouritePodCell.swift; sourceTree = SOURCE_ROOT; };
-		5FDE775B2921F87F00E552A3 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DatabaseManager.swift; path = nasa/DatabaseManager.swift; sourceTree = SOURCE_ROOT; };
-		5FEB193F29213AB4001237D4 /* FavouritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavouritesViewController.swift; path = nasa/Favourite/FavouritesViewController.swift; sourceTree = SOURCE_ROOT; };
+		5FDE775B2921F87F00E552A3 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DatabaseManager.swift; path = Nasa/DatabaseManager.swift; sourceTree = SOURCE_ROOT; };
+		5FEB193F29213AB4001237D4 /* FavouritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavouritesViewController.swift; path = Nasa/Favourite/FavouritesViewController.swift; sourceTree = SOURCE_ROOT; };
 		5FEB194029213AB4001237D4 /* FavouritesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavouritesViewModel.swift; path = nasa/Favourite/FavouritesViewModel.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -131,13 +137,13 @@
 				5F4E979C291FEFD70087B8CF /* Landing */,
 				5FEB193E29213A6E001237D4 /* Favourite */,
 				5F1623222921944700F381EC /* Network */,
+				5F4BA3F329226B8200BC1DB8 /* Database */,
 				5F16232B2921947E00F381EC /* Common */,
 				5F073842291F7D9400AF0886 /* Main.storyboard */,
 				5F07384A291F7D9600AF0886 /* LaunchScreen.storyboard */,
+				5F073845291F7D9400AF0886 /* Nasa.xcdatamodeld */,
 				5F073848291F7D9600AF0886 /* Assets.xcassets */,
 				5F07384D291F7D9600AF0886 /* Info.plist */,
-				5F073845291F7D9400AF0886 /* Nasa.xcdatamodeld */,
-				5FDE775B2921F87F00E552A3 /* DatabaseManager.swift */,
 			);
 			path = Nasa;
 			sourceTree = "<group>";
@@ -145,7 +151,10 @@
 		5F073855291F7D9700AF0886 /* NasaTests */ = {
 			isa = PBXGroup;
 			children = (
-				5F073856291F7D9700AF0886 /* NasaTests.swift */,
+				5F4BA3E92922624F00BC1DB8 /* PictureOfDayViewModelTests.swift */,
+				5F4BA3F12922630000BC1DB8 /* MockPictureOfDayViewModel.swift */,
+				5F4BA3EB2922625E00BC1DB8 /* FavouritesViewModelTests.swift */,
+				5F4BA3ED292262A900BC1DB8 /* MockFavouritesViewModel.swift */,
 			);
 			path = NasaTests;
 			sourceTree = "<group>";
@@ -196,6 +205,16 @@
 			path = "App Lifecycle";
 			sourceTree = "<group>";
 		};
+		5F4BA3F329226B8200BC1DB8 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				5FDE775B2921F87F00E552A3 /* DatabaseManager.swift */,
+				5F4BA3E52922465200BC1DB8 /* Favourites+CoreDataClass.swift */,
+				5F4BA3E62922465200BC1DB8 /* Favourites+CoreDataProperties.swift */,
+			);
+			name = Database;
+			sourceTree = "<group>";
+		};
 		5F4E979C291FEFD70087B8CF /* Landing */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,8 +227,6 @@
 		5FEB193E29213A6E001237D4 /* Favourite */ = {
 			isa = PBXGroup;
 			children = (
-				5F4BA3E52922465200BC1DB8 /* Favourites+CoreDataClass.swift */,
-				5F4BA3E62922465200BC1DB8 /* Favourites+CoreDataProperties.swift */,
 				5FEB193F29213AB4001237D4 /* FavouritesViewController.swift */,
 				5FEB194029213AB4001237D4 /* FavouritesViewModel.swift */,
 				5F6DFBFE29213E1D0013A7DB /* FavouritePodCell.swift */,
@@ -372,7 +389,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F073857291F7D9700AF0886 /* NasaTests.swift in Sources */,
+				5F4BA3F22922630000BC1DB8 /* MockPictureOfDayViewModel.swift in Sources */,
+				5F4BA3EA2922624F00BC1DB8 /* PictureOfDayViewModelTests.swift in Sources */,
+				5F4BA3EC2922625E00BC1DB8 /* FavouritesViewModelTests.swift in Sources */,
+				5F4BA3EE292262A900BC1DB8 /* MockFavouritesViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
