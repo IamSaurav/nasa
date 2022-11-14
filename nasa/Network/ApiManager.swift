@@ -22,7 +22,7 @@ final class ApiManager {
     static let appJson = "application/json"
     static let contentType = "Content-Type"
     
-    private let noNetwork = "Not connected to internet! Please check and try again"
+    private let noNetwork = "Not internet connection! Please check and try again"
     private let somethingWentWrong = "Something Went Wrong"
     
     init(session: URLSession = URLSession(configuration: URLSessionConfiguration.default)) {
@@ -85,11 +85,11 @@ enum NasaError: Error, Equatable, Hashable, LocalizedError {
     var errorDescription: String? {
         switch self {
         case .network(let message):
-            return message.capitalized
+            return message
         case .parser:
             return "Unable to process data, please try again"
         case .other(let message):
-            return message.capitalized
+            return message
         }
     }
 }

@@ -10,7 +10,7 @@ import Foundation
 struct PlanatoryPod: Codable {
     var copyright, date, explanation: String?
     var hdurl, thumbnail_url: String?
-    var mediaType, serviceVersion, title: String?
+    var media_type, service_version, title: String?
     var url: String?
     var isFavourite: Bool?
 }

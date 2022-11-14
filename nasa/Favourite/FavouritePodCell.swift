@@ -13,8 +13,8 @@ class FavouritePodCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var playImageView: UIImageView!
     
-    func populateData(pod: PlanatoryPod) {
-        if pod.mediaType == "video" {
+    func populateData(pod: Favourites) {
+        if pod.media_type == "video" {
             playImageView.isHidden = false
             downloadImage(urlString: pod.thumbnail_url)
         }else {

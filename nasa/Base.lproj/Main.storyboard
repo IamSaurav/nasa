@@ -62,7 +62,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qPr-am-q6b" userLabel="TitleLabel">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qPr-am-q6b" userLabel="TitleLabel">
                                 <rect key="frame" x="20" y="832" width="0.0" height="0.0"/>
                                 <color key="backgroundColor" white="1" alpha="0.078634299979304642" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
@@ -70,7 +70,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N1L-kf-ABK">
-                                <rect key="frame" x="349" y="816.5" width="45" height="31"/>
+                                <rect key="frame" x="25" y="816.5" width="369" height="31"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" systemColor="systemPinkColor"/>
                                 <state key="normal" title="Button"/>
@@ -97,7 +97,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dmP-Kt-b4Y" secondAttribute="trailing" constant="20" id="CRA-Sv-Oi2"/>
                             <constraint firstItem="dmP-Kt-b4Y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="EkS-wG-7gc"/>
                             <constraint firstItem="wjf-il-VLZ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="LKd-9T-JQN"/>
-                            <constraint firstItem="qPr-am-q6b" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="N1L-kf-ABK" secondAttribute="leading" constant="-5" id="Nx5-B8-ogv"/>
+                            <constraint firstItem="qPr-am-q6b" firstAttribute="trailing" secondItem="N1L-kf-ABK" secondAttribute="leading" constant="-5" id="Nx5-B8-ogv"/>
                             <constraint firstItem="qPr-am-q6b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="aEC-pC-Kfn"/>
                             <constraint firstItem="thW-96-YZL" firstAttribute="leading" secondItem="wjf-il-VLZ" secondAttribute="leading" constant="20" id="cWA-9b-qNJ"/>
                             <constraint firstItem="wjf-il-VLZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="enA-hf-FMm"/>

@@ -48,7 +48,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         iconView.isUserInteractionEnabled = true
         iconView.tintColor = .systemTeal
         iconView.image = UIImage.init(systemName: "arrow.down.circle")
-        let iconContainerView: UIView = UIView(frame:CGRect(x: 20, y: 0, width: 30, height: 30))
+        let iconContainerView: UIView = UIView(frame:CGRect(x: 10, y: 0, width: 30, height: 30))
         dateTextField.delegate = self
         iconContainerView.addSubview(iconView)
         dateTextField.leftView = iconContainerView
@@ -85,7 +85,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         viewModel.getPictureOfDay(date: selectedDate.toString(), successful: { _ in
             self.populateData()
         }, failed: { errorMessage in
-            
+            self.alert(message: errorMessage)
         })
     }
     
@@ -93,7 +93,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.titleLabel.text = viewModel.plantoryPod.title
         self.explanationLabel.text = viewModel.plantoryPod.explanation
         self.updateFavouriteButtonState()
-        if viewModel.plantoryPod.mediaType == "video" {
+        if viewModel.plantoryPod.media_type == "video" {
             guard let urlString = viewModel.plantoryPod.url, let url = URL.init(string: urlString) else {return}
             webView.frame = CGRect.init(x: 0, y: 120, width: view.bounds.width, height: view.bounds.height/2)
             view.addSubview(webView)
@@ -130,6 +130,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         let isFavourite = viewModel.plantoryPod.isFavourite == true
         viewModel.plantoryPod.isFavourite = !isFavourite
         updateFavouriteButtonState()
+        viewModel.updatePod(pod: viewModel.plantoryPod)
     }
     
     func updateFavouriteButtonState() {
@@ -145,6 +146,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         navController.modalPresentationStyle = .formSheet
         present(navController, animated: true)
         favViewController.showFavouritePod = { pod in
+            self.toggleControls(fadeOut: false)
             self.selectedDate = self.toDate(date: pod.date)
             self.viewModel.plantoryPod = pod
             self.populateData()
@@ -159,12 +161,17 @@ class ViewController: UIViewController, UITextFieldDelegate {
         return dateformatter.date(from: date) ?? Date()
     }
     
+    func alert(message: String) {
+        let alertController = UIAlertController.init(title: "NASA", message: message, preferredStyle: .alert)
+        alertController.addAction(.init(title: "Okay", style: .default, handler: nil))
+        present(alertController, animated: true, completion: nil)
+    }
     
 }
 
 
 extension UIView {
-    func fadeIn(duration: TimeInterval = 1, delay: TimeInterval = 0.0, completion: @escaping ((Bool) -> Void) = {(finished: Bool) -> Void in }) {
+    func fadeIn(duration: TimeInterval = 0.5, delay: TimeInterval = 0.0, completion: @escaping ((Bool) -> Void) = {(finished: Bool) -> Void in }) {
         self.alpha = 0.0
         UIView.animate(withDuration: duration, delay: delay, options: UIView.AnimationOptions.curveEaseIn, animations: {
             self.isHidden = false

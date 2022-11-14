@@ -40,7 +40,7 @@ extension FavouritesViewController: UICollectionViewDelegate, UICollectionViewDa
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        showFavouritePod?(viewModel.astronomyPods[indexPath.row])
+        showFavouritePod?(viewModel.astronomyPods[indexPath.row].toPlanatoryPod())
         dismiss(animated: true)
     }
     
